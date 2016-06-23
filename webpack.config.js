@@ -3,7 +3,9 @@ var webpack = require('webpack');
 
 var config = {
   entry: 'index.js',
-  output: {}
+  output: {
+    path: path.join(__dirname, 'public', 'js')
+  }
 };
 
 module.exports = config;
