@@ -1,5 +1,7 @@
 function home(req, res){
-  res.send('sent !');
+  res.render('home', {
+    title: 'welcome'
+  })
 }
 
 module.exports = home;
