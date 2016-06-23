@@ -4,3 +4,4 @@
 * nunjucks
 * mongoose
 * passport
+* faker.js
