@@ -5,12 +5,13 @@ var dotenv = require('dotenv');
 var nunjucks = require('nunjucks');
 var mongoose = require('mongoose');
 
-app.use(express.static(path.join(__dirname, 'public')));
-// all static files are served from here, no need to write 'public' in path,
-// example => <script src="/js/bundle.js"></script>, js is inside public
 
 dotenv.load();
 var app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
+// all static files are served from here, no need to write 'public' in path,
+// example => <script src="/js/bundle.js"></script>, js is inside public
 
 var HomeController = require('./controllers/home');
 var userController = require('./controllers/user');
@@ -23,7 +24,7 @@ nunjucks.configure('views', {
 });
 
 app.set('view engine', 'html');
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 
 /* `mongod --dbpath=./db` */
 

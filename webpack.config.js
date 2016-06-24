@@ -2,10 +2,11 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-  entry: 'index.js',
+  entry: './app/main',
   output: {
     path: path.join(__dirname, 'public', 'js'),
-    publicPath: '/js'
+    publicPath: '/js/',
+    filename: 'bundle.js'
   }
 };
 
