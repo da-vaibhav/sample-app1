@@ -5,8 +5,9 @@
     <title>{{title}}</title>
   </head>
   <body>
-    {% block body %}{% endblock %}
-    
+
+    <div id="app">{{html|safe}}</div>
+
     <script src="/js/bundle.js"></script>
   </body>
 </html>
